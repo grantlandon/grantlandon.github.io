@@ -19,31 +19,6 @@ header.hero {
     text-align: center;
 }
 
-.hero-content h1 {
-    font-size: 4rem;
-    margin: 0;
-}
-
-.hero-content p {
-    font-size: 1.25rem;
-    margin-top: 10px;
-}
-
-.cta-button {
-    margin-top: 20px;
-    padding: 10px 25px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 50px;
-    transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #0056b3;
-}
-
 nav {
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -86,49 +61,80 @@ nav ul li a:hover {
     transition: color 0.3s ease;
 }
 
-.dark-mode-toggle:hover {
-    color: #007bff;
-}
-
 section {
     padding: 80px 20px;
     margin: 0;
 }
 
-#about, #contact {
+#chat {
     text-align: center;
+    padding: 40px 20px;
+    background-color: #f1f1f1;
 }
 
-#projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.project-card {
-    width: 300px;
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 8px;
+.chat-container {
+    max-width: 600px;
+    margin: 0 auto;
     background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.project-card h3 {
-    margin-top: 0;
-    color: #007bff;
-}
-
-.project-card img {
-    width: 100%;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.chat-box {
+    height: 300px;
+    overflow-y: auto;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.chat-message {
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    max-width: 80%;
+    display: inline-block;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background-color: #007bff;
+    color: white;
+    align-self: flex-end;
+}
+
+.bot-message {
+    background-color: #eee;
+    color: #333;
+    align-self: flex-start;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#user-input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+}
+
+#send-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#send-button:hover {
+    background-color: #0056b3;
 }
 
 footer {
@@ -138,36 +144,4 @@ footer {
     color: #666;
     border-top: 1px solid #ddd;
     margin-top: 40px;
-}
-
-body.dark-mode {
-    background-color: #121212;
-    color: white;
-}
-
-body.dark-mode header.hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('images/hero-background.jpg') no-repeat center center/cover;
-}
-
-body.dark-mode nav {
-    background-color: #333;
-    color: white;
-}
-
-body.dark-mode nav ul li a {
-    color: white;
-}
-
-body.dark-mode .dark-mode-toggle {
-    color: white;
-}
-
-body.dark-mode .project-card {
-    background-color: #1e1e1e;
-    border: 1px solid #333;
-}
-
-body.dark-mode footer {
-    background-color: #333;
-    color: #bbb;
 }
