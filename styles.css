@@ -1,126 +1,129 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f8f9fa;
     color: #333;
     scroll-behavior: smooth;
     transition: background-color 0.3s, color 0.3s;
+    line-height: 1.6;
 }
 
 header.hero {
-    background: url('images/hero-background.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero-background.jpg') no-repeat center center/cover;
     height: 100vh;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    position: relative;
 }
 
 .hero-content h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin: 0;
 }
 
 .hero-content p {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin-top: 10px;
 }
 
 .cta-button {
     margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #ff5733;
+    padding: 10px 25px;
+    background-color: #007bff;
     color: white;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 50px;
     transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: #ff784e;
+    background-color: #0056b3;
 }
 
 nav {
-    background-color: #333;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
+    padding: 10px 20px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    padding: 10px 0;
+    padding: 0;
     margin: 0;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
-nav ul li a, nav ul li button {
-    color: white;
+nav ul li a {
+    color: #333;
     text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 16px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+.dark-mode-toggle {
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 1rem;
-    padding: 8px 16px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    font-size: 1.25rem;
+    color: #333;
+    transition: color 0.3s ease;
 }
 
-nav ul li a:hover, nav ul li button:hover {
-    background-color: #555;
+.dark-mode-toggle:hover {
+    color: #007bff;
 }
 
 section {
     padding: 80px 20px;
     margin: 0;
-    background-attachment: fixed;
-    background-size: cover;
-    opacity: 0;
-    animation: fadeIn 2s forwards;
-    animation-delay: 0.5s;
 }
 
-#about {
-    background: url('images/about-background.jpg') no-repeat center center/cover;
-    color: white;
+#about, #contact {
+    text-align: center;
 }
 
 #projects {
-    background: url('images/projects-background.jpg') no-repeat center center/cover;
-    color: white;
-}
-
-#contact {
-    background: url('images/contact-background.jpg') no-repeat center center/cover;
-    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .project-card {
-    border: none;
+    width: 300px;
+    border: 1px solid #ddd;
     padding: 20px;
-    margin-bottom: 20px;
+    margin: 20px;
     border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .project-card h3 {
     margin-top: 0;
-    color: #ff5733;
+    color: #007bff;
 }
 
 .project-card img {
@@ -131,24 +134,40 @@ section {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #333;
-    color: white;
+    background-color: #f8f9fa;
+    color: #666;
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
 }
 
 body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+body.dark-mode header.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('images/hero-background.jpg') no-repeat center center/cover;
+}
+
+body.dark-mode nav {
     background-color: #333;
     color: white;
 }
 
-body.dark-mode header.hero, body.dark-mode footer {
-    background-color: #222;
+body.dark-mode nav ul li a {
+    color: white;
+}
+
+body.dark-mode .dark-mode-toggle {
+    color: white;
 }
 
 body.dark-mode .project-card {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #1e1e1e;
+    border: 1px solid #333;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+body.dark-mode footer {
+    background-color: #333;
+    color: #bbb;
 }
