@@ -1,58 +1,60 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabs - @programador.cs</title>
-    <link rel="stylesheet" href="./styles.css">
-
+    <title>Grant Landon - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
 <body>
-    <div class="conteudo__geral">
-        <div class="estrutura__grid">
-            <div class="estrutura__grid-elemento__inicial estrutura__grid-elemento__inicial--1-of-3">
-                <div class="estrutura__grid-caixa">
-                    <div class="estrutura__grid-selecionado"><span
-                            class="estrutura__grid-claro"></span><span>HTML</span></div>
-                    <div><span class="estrutura__grid-claro"></span><span>CSS</span></div>
-                    <div><span class="estrutura__grid-claro"></span><span>Javascript</span></div>
-                </div>
-            </div>
-            <div class="estrutura__grid-elemento__inicial estrutura__grid-elemento__inicial--2-of-3">
-                <ul class="estrutura__grid-conteudo">
-                    <li class="estrutura__grid-selecionado">
-                        <div>
-                            <p>HTML (Linguagem de Marcação de HiperTexto) é o bloco de construção mais básico da web.
-                                Define o significado e a estrutura do conteúdo da web. Outras tecnologias além do HTML
-                                geralmente são usadas para descrever a aparência/apresentação (CSS) ou a
-                                funcionalidade/comportamento (JavaScript) de uma página da web.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <p>
-                                CSS (Cascading Style Sheets) 
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <p>
-                                JavaScript é uma linguagem de programação interpretada estruturada, de script em alto
-                                nível com tipagem dinâmica fraca e multiparadigma. Juntamente com HTML e CSS, o
-                                JavaScript é uma das três principais tecnologias da World Wide Web.
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Grant Landon</h1>
+            <p>Sc.M. in Computer Science | Sc.B. in Applied Math – Computer Science</p>
+            <a href="#projects" class="cta-button">Explore My Work</a>
         </div>
-    </div>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-    <script src="./script.js"></script>
-</body>
+    </header>
 
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><button id="dark-mode-toggle">Toggle Dark Mode</button></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm Grant Landon, currently pursuing a Sc.M. in Computer Science and a Sc.B. in Applied Math – Computer Science at Brown University...</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-card">
+            <h3>Project Title 1</h3>
+            <img src="images/project-image-1.jpg" alt="Project Image 1">
+            <p>Short description of the project.</p>
+        </div>
+        <div class="project-card">
+            <h3>Project Title 2</h3>
+            <img src="images/project-image-2.jpg" alt="Project Image 2">
+            <p>Short description of the project.</p>
+        </div>
+        <!-- Add more project cards as needed -->
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Feel free to reach out to me via email at <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i> youremail@example.com</a>.</p>
+        <p>Or connect with me on <a href="https://www.linkedin.com/in/yourprofile"><i class="fab fa-linkedin"></i> LinkedIn</a>.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Grant Landon. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
