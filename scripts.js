@@ -1,4 +1,12 @@
-document.getElementById('send-button').addEventListener('click', function() {
+document.getElementById('send-button').addEventListener('click', sendMessage);
+
+document.getElementById('user-input').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        sendMessage();
+    }
+});
+
+function sendMessage() {
     const userInput = document.getElementById('user-input').value;
     if (userInput.trim() === '') return;
 
@@ -10,7 +18,7 @@ document.getElementById('send-button').addEventListener('click', function() {
     }, 500);
 
     document.getElementById('user-input').value = '';
-});
+}
 
 function addMessage(message, className) {
     const messageElement = document.createElement('div');
